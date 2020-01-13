@@ -1,4 +1,4 @@
-# Create a function that prints the sign of an integer number n.
+# Create a function that prints the sign of an integer number n
 
 
 def number_check():
