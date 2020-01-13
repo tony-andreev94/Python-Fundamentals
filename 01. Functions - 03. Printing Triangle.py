@@ -1,4 +1,15 @@
 # Create a function for printing triangles of numbers as shown below
+# Input:
+# 4
+#
+# Output:
+# 1
+# 1 2
+# 1 2 3
+# 1 2 3 4
+# 1 2 3
+# 1 2
+# 1
 
 
 def numbers_print(num):
