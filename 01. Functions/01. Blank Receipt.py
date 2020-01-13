@@ -1,5 +1,5 @@
 # Create a function that prints a blank cash receipt. The function should invoke three other functions: 
-# one for printing the header, one for the body and one for the footer of the receipt. 
+# One for printing the header, one for the body and one for the footer of the receipt. 
 
 
 def header_function():
