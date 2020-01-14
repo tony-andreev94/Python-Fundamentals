@@ -1,27 +1,15 @@
-# Write a program to read a list of integers, finds the smallest item and print it.
-
-from math import inf
+# Write a program to read a list of integers, finds the smallest item and prints it.
 
 
 def find_smallest_number(input_list):
-    comparison_value = inf
+    min_number = input_list[0]
     for x in input_list:
-        if x < comparison_value:
-            comparison_value = x
+        if x < min_number:
+            min_number = x
 
-    return comparison_value
-
-
-def convert_to_int(input_list):
-    list_of_numbers = []
-    for x in input_list:
-        list_of_numbers.append(int(x))
-
-    return list_of_numbers
+    return min_number
 
 
 if __name__ == "__main__":
-    my_list = input().split(" ")
-    result = convert_to_int(my_list)
-    printed_result = find_smallest_number(result)
-    print(printed_result)
+    my_list = [int(x) for x in input().split()]
+    print(find_smallest_number(my_list))
