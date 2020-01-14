@@ -19,3 +19,4 @@ def remove_negatives_and_reverse(input_list):
 
 if __name__ == "__main__":
     my_list = [int(x) for x in input().split(" ")]
+    remove_negatives_and_reverse(my_list)
