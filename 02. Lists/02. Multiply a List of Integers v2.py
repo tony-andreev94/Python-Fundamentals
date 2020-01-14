@@ -10,6 +10,8 @@ def multiply_func(list_element, multiplicand):
 
 if __name__ == "__main__":
     my_list = list(map(int, input().split(" ")))
+    # Alternative solution for reading input as list of integers:
+    # my_list = [int(x) for x in input().split(" ")]
     multiply_value = int(input())
     result = [multiply_func(x, multiply_value) for x in my_list]
     # print(*result) is the python way to print the list items separated by space, without storing them in a list
