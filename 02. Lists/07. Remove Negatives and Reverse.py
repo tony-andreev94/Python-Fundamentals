@@ -2,14 +2,6 @@
 # and print the resulted list in reversed order
 
 
-def convert_to_int_list(input_list):
-    int_list = []
-    for x in input_list:
-        if x != '-':
-            int_list.append(int(x))
-    return int_list
-
-
 def remove_negatives_and_reverse(input_list):
     result_list = []
     counter = 0
@@ -26,5 +18,4 @@ def remove_negatives_and_reverse(input_list):
 
 
 if __name__ == "__main__":
-    my_list = input().split(" ")
-    remove_negatives_and_reverse(convert_to_int_list(my_list))
+    my_list = [int(x) for x in input().split(" ")]
