@@ -4,8 +4,8 @@
 # Return the multiplied items without storing them in a list
 
 
-def list_multiplication(list, multiplicator):
-    for y in list:
+def list_multiplication(input_list, multiplicator):
+    for y in input_list:
         new_element = multiplicator * y
         print(new_element, end=" ")
 
