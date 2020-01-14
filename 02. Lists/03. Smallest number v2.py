@@ -11,3 +11,5 @@ def list_sort_func(input_list):
 if __name__ == "__main__":
     my_list = [int(x) for x in input().split()]
     print(list_sort_func(my_list))
+    # Alternative solution without additional functions or sorting is using the min(list) method:
+    # print(min(my_list))
