@@ -7,6 +7,8 @@
 def rotate_func(input_list):
     print(input_list[-1], end=" ")
     print(*input_list[:-1])
+    # Alternative solution:
+    # print(input_list[-1], *input_list[:-1])
 
 
 if __name__ == "__main__":
