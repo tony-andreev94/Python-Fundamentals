@@ -11,10 +11,7 @@ def list_multiplication(input_list, multiplicator):
 
 
 if __name__ == "__main__":
-    my_list = input().split(" ")
-    numbers_list = []
-    for x in my_list:
-        numbers_list.append(int(x))
-
+    data_list = list(map(int, input().split(" ")))
     multiplicand = int(input())
-    list_multiplication(numbers_list, multiplicand)
+    list_multiplication(data_list, multiplicand)
+
