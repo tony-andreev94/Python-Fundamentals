@@ -10,10 +10,15 @@
 
 
 def loading_func(percent):
-    switcher = {
-        0: print(f"{0}% [..........]\nStill loading..."),
-        10: print(f"{10}% [%.........]\nStill loading...")
-    }
+    x = percent / 10
+    if x == 10:
+        print("100% Complete!")
+        print("[%%%%%%%%%%]")
+    else:
+        print(f"{number}% [{'%' * int(x)}{'.' * (10 - int(x))}]")
+        print("Still loading...")
+
 
 number = int(input())
 loading_func(number)
+
