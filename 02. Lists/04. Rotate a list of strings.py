@@ -4,12 +4,16 @@
 # soft uni hi  ->  hi soft uni
 
 
+# updated solution that is more universal making it easier to change the amount of rotated elements
 def move_last_element(input_list):
+    moved_elements = 1  # variable to change the amount of moved elements
     new_list = []
-    new_list.extend(input_list[-1:])
-    new_list.extend(input_list[:-1])
-    for x in new_list:
-        print(x, end=" ")
+    for i in range(moved_elements):
+        last_element = input_list.pop()
+        new_list.append(last_element)
+        for index in range(len(input_list)):
+            new_list.append(input_list[index])
+        print(*new_list)
 
 
 if __name__ == "__main__":
