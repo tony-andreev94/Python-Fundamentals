@@ -1,29 +1,14 @@
+# You will receive a single line containing numbers separated by a single space.
+# Form the biggest number possible from them
 
+# Input	                    Output	        Comment
+# 3 30 34 5 9	            9534303	        The numbers sorted are 9 5 34 30 3
+# 1 2 3	                    321
 
 input_list = input().split()
 first_digit_list = []
 
-# take first digit
-# compare first digits - sort reversed
-# if there are even first digits: <--------------
-#   - take bigger 2digit number
-#   - take 2digit number
-#   - take 1digit number
-
-# take first digit
-for each_item in input_list:
-    first_digit = int(each_item[:1])
-    first_digit_list.append(first_digit)
-
-
-output_list = []
-element_index = first_digit_list.index(max(first_digit_list))
-# output_list.append(input_list[element_index])
-print(element_index)
-# output_list.append(max(first_digit_list))
-
-
-print(input_list)
-print(first_digit_list)
+for each_item in list(reversed(sorted(input_list))):
+    print(each_item, end="")
 
 
