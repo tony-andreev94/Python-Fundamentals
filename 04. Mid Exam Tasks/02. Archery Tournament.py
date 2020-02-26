@@ -1,4 +1,4 @@
-# can't understand the task
+# can't understand what is required
 
 # Take input
 targets = list(int(x) for x in input().split('|'))

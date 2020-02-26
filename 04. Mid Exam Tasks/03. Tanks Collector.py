@@ -36,5 +36,5 @@ for i in range(commands_amount):
                 print("Tank is already bought")
 
 # Printing output:
-test_string = ", ".join(owned_tanks)
-print(test_string)
+result_string = ", ".join(owned_tanks)
+print(result_string)
