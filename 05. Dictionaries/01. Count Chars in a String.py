@@ -5,6 +5,9 @@
 user_input = input()
 result_dict = {}
 
+# Remove whitespaces from the input string
+# user_input.replace(" ", "")
+
 for each_char in user_input:
     if each_char not in result_dict and not each_char == ' ':
         result_dict[each_char] = user_input.count(each_char)
