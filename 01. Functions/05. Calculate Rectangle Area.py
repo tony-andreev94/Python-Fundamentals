@@ -11,6 +11,7 @@
 def rectangle_func(a, b):
     return a * b
 
+
 side_a = int(input())
 side_b = int(input())
 

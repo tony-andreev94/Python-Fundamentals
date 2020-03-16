@@ -17,6 +17,8 @@ def calc_function(operand, x, y):
         result = x + y
     elif operand == "subtract":
         result = x - y
+    else:
+        return "invalid input"
 
     return int(result)
 
