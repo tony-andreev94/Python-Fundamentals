@@ -34,5 +34,25 @@ def char_multiplier(first_s, second_s):
     return result
 
 
+def new_solution(first_s, second_s):
+    total_sum = 0
+    min_len = min(len(first_s), len(second_s))
+    for i in range(min_len):
+        total_sum += ord(first_s[i]) * ord(second_s[i])
+
+    if len(first_s) == len(second_s):
+        return total_sum
+    else:
+        longer_s = first_s
+        if len(second_s) > len(first_s):
+            longer_s = second_s
+
+        for index in range(min_len, len(longer_s)):
+            total_sum += ord(longer_s[index])
+
+        return total_sum
+
+
 string_input = input().split(" ")
-print(char_multiplier(string_input[0], string_input[1]))
+# print(char_multiplier(string_input[0], string_input[1]))
+print(new_solution(string_input[0], string_input[1]))
