@@ -11,5 +11,10 @@ def cipher_func(string):
     return result
 
 
+def comprehension_solution(string):
+    return "".join([chr(ord(char) + 3) for char in string])
+
+
 message = input()
 print(cipher_func(message))
+print(comprehension_solution(message))

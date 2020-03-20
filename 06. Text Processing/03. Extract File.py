@@ -5,6 +5,7 @@
 #                                                   File extension: pptx
 
 
+# First solution:
 def file_extractor(string):
     reversed_string = string[::-1]
     reversed_result = ""
@@ -35,7 +36,20 @@ def extension_extractor(string):
     return reversed_result[::-1]
 
 
+# Second solution
+def alternative_solution(string):
+    test_list = string.split("\\")
+    last_part = test_list[-1]
+    file = last_part.split(".")[0]
+    extension = last_part.split(".")[1]
+
+    return f"File name: {file}\n" \
+           f"File extension: {extension}"
+
+
 file_path = input()
 print(f"File name: {file_extractor(file_path)}")
 print(f"File extension: {extension_extractor(file_path)}")
+
+print(alternative_solution(file_path))
 

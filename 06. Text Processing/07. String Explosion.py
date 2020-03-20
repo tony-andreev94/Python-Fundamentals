@@ -20,5 +20,23 @@ def explosion_func(text):
     return "".join(each for each in text_list if each != 0)
 
 
+def alternative_solution(text):
+    index = 0
+    power = 0
+    while index < len(text):
+        if text[index] == ">":
+            power += int(text[index + 1])
+
+        elif power > 0:
+            text = text[:index] + text[index + 1:]
+            index -= 1
+            power -= 1
+
+        index += 1
+
+    return text
+
+
 text_input = input()
 print(explosion_func(text_input))
+print(alternative_solution(text_input))
