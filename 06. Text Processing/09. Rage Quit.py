@@ -12,8 +12,6 @@
 #                   AAA
 # aSd2&5s@1         Unique symbols used: 5
 #                   ASDASD&&&&&S@
-import time
-start_time = time.time()
 
 
 def find_unique_symbols(text):
@@ -33,9 +31,13 @@ def input_modifier(text):
     :param text:    aSd2&5s@1
     :return:    ['aSd2', '&5', 's@1']
     """
-    for char in text:
-        if char.isdigit():
-            text = text.replace(char, char + ' ')
+    for index in range(len(text)):
+        if text[index].isdigit():
+            if index + 1 < len(text) and not text[index + 1].isdigit():
+                text = text.replace(text[index], text[index] + ' ')
+            elif index + 1 < len(text) and text[index + 1].isdigit():
+                temp_part = text[index] + text[index + 1]
+                text = text.replace(temp_part, temp_part + ' ')
     modified_input = text.split()
     return modified_input
 
@@ -44,12 +46,13 @@ def string_builder(text):
     work_list = input_modifier(text)
     result_list = []
     for each in work_list:
-        result_list.append(each[:-1].upper() * int(each[-1]))
-
+        if not 48 <= ord(each[-2]) <= 57:  # check if the number of repetitions is a two digit number
+            result_list.append(each[:-1].upper() * int(each[-1]))
+        else:
+            result_list.append(each[:-2].upper() * int(each[-2] + each[-1]))
     return "".join(result_list)
 
 
 message = input()
 print(f"Unique symbols used: {find_unique_symbols(message)}")
 print(string_builder(message))
-#print("--- %s seconds ---" % (time.time() - start_time))

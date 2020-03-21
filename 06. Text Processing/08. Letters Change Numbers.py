@@ -13,9 +13,9 @@
 
 
 def find_alphabet_position(letter):
-    if 65 <= ord(letter) <= 90:
+    if letter.isupper():  # get position of uppercase letters
         letter_position = ord(letter) - 64
-    elif 97 <= ord(letter) <= 122:
+    elif letter.islower():  # get position of lowercase letters
         letter_position = ord(letter) - 96
 
     return letter_position
@@ -40,7 +40,7 @@ def find_string_sum(string):
 
 def find_total_sum(string):
     total_sum = 0
-    work_list = string.split() # by splitting with .split() the split is done by all whitespace and not just by " "
+    work_list = string.split()  # by splitting with .split() the split is done by all whitespace and not just by " "
     for each in work_list:
         total_sum += find_string_sum(each)
 
