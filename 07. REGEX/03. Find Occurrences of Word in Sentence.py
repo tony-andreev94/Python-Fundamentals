@@ -12,14 +12,20 @@ def find_word(string, word):
 
 
 def build_regex(word):
-    regex = ""
+    regex = r"\b"
     for char in word:
         regex += f"[{char}]"
-    regex += r"\W"  # add this to the regex, so that parts of words are not considered a match (there in therefore)
+    regex += r"\b"  # add boundary to the regex, so that parts of words are not considered a match (there in therefore)
+    return regex
+
+
+# a shorter way to build the regex
+def build_regex_short(word):
+    regex = rf"\b{word}\b"
     return regex
 
 
 user_input = input()
 word = input()
 print(find_word(user_input, word))
-
+# print(build_regex(word))
