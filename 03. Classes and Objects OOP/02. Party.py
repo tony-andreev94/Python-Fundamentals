@@ -6,12 +6,16 @@
 #   "Total: {total_people_going}"
 
 
-class Party():
+class Party:
     def __init__(self):
         self.guest_list = []
 
     def add_guest(self, person_name):
         self.guest_list.append(person_name)
+
+    def get_summary(self): # alternative way to have a method to print the results 
+        guest_names = ', '.join([guest.name for guest in self.guest_list])
+        return f"Going: {guest_names}\nTotal:{len(self.guest_list)}"
 
 
 event_1 = Party()

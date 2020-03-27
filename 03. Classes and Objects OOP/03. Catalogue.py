@@ -20,18 +20,20 @@ class Catalogue:
         self.products.append(product)
 
     def get_by_letter(self, first_letter):
-        new_products = []
-        for each_item in self.products:
-            if each_item.startswith(first_letter) == True:
-                new_products.append(each_item)
-        return new_products
+        filtered_list = []
+        for each in self.products:
+            if each[0] == first_letter:
+                filtered_list.append(each)
+
+        return filtered_list
 
     def __repr__(self):
         self.products.sort()
-        result_str = "\n".join(self.products)
-        return f"Items in the {self.name} catalogue: \n{result_str}"
+        result_start = f"Items in the {self.name} catalogue:"
+        return f"{result_start}\n" + "\n".join(self.products)
 
 
+# Testing
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
 catalogue.add_product("Mirror")
