@@ -27,14 +27,6 @@ while command[0] != "Complete":
                 else:
                     break
             print(result)
-        # regex solution - timeout errror in judge due to regex import
-        # regex = r"\w+(?=@)"
-        # re_username = re.findall(regex, email)
-        # if len(re_username) > 0:
-        #     username = "".join(re_username)
-        #     print(username)
-        # else:
-        #     print(f"The email {email} doesn't contain the @ symbol.")
     elif command[0] == "Replace":
         char = command[1]
         new_email = email.replace(char, '-')

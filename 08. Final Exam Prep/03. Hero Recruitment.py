@@ -1,6 +1,7 @@
 # TODO sort the dictionary before printing:
 # Print all the heroes sorted by their count of spells in descending
 # and then by the hero name ascending in the format described below:
+# revisit
 
 hero_dict = {}
 command = input().split()

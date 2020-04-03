@@ -1,4 +1,5 @@
 # TODO - 90/100
+# revisit
 skill = input()
 command = input().split()
 
